@@ -1,0 +1,173 @@
+/* Reset & Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1d2b64, #f8cdda);
+  min-height: 100vh;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Container */
+.container {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
+  padding: 30px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(12px);
+  animation: fadeIn 0.5s ease-in;
+}
+
+/* Heading */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #ffeb3b;
+  text-shadow: 2px 2px #000;
+}
+
+/* Category */
+#category {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: #ffd54f;
+}
+
+/* Canvas */
+canvas {
+  background-color: #fff;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 200px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Word Display */
+.word {
+  font-size: 2rem;
+  letter-spacing: 12px;
+  margin: 20px 0;
+  color: #fff;
+}
+
+/* Letter Buttons */
+.letters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0 20px;
+}
+
+.letters button {
+  padding: 10px 14px;
+  font-size: 1.2rem;
+  background: #2196f3;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  box-shadow: 0 4px 8px rgba(33, 150, 243, 0.3);
+}
+
+.letters button:hover {
+  background: #1976d2;
+}
+
+.letters button:disabled {
+  background: #777;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Message */
+.message {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Hint */
+#hint-btn {
+  margin: 10px 10px 5px;
+  padding: 10px 20px;
+  background: #ff5722;
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(255, 87, 34, 0.4);
+}
+
+#hint-btn:hover {
+  background: #e64a19;
+}
+
+#hint-text {
+  font-size: 1rem;
+  margin: 8px 0 12px;
+  color: #ffe082;
+  font-style: italic;
+}
+
+/* Play Again */
+#play-again {
+  padding: 10px 25px;
+  font-size: 1.1rem;
+  background: #43a047;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
+  transition: background 0.2s ease;
+}
+
+#play-again:hover {
+  background: #388e3c;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .word {
+    font-size: 1.5rem;
+    letter-spacing: 8px;
+  }
+
+  .letters button {
+    padding: 8px 12px;
+    font-size: 1rem;
+  }
+
+  #hint-btn, #play-again {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
